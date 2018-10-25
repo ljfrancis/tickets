@@ -1,0 +1,26 @@
+<main>
+	<div class="container mt-4">
+	<h1>Customer Orders</h1>
+	<h3>{{customer.name}}</h3>
+	<table class="table">
+        <thead class="thead-dark">
+			<tr>
+				<th>Artist</th>
+				<th>Show Date</th>
+				<th>Date Purchased</th>
+				<th>Number of Tickets</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each show}}
+				<tr>
+					<td>{{show.artist}}</td>
+					<td>{{show.date}}</td>
+					<td>{{show.ticketsPurchased}}</td>
+					<td>{{show.datePurchased}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+</main>

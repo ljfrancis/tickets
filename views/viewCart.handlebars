@@ -1,0 +1,30 @@
+<main>
+	<div class="container mt-4">
+	<h1>Cart</h1>
+	<table class="table">
+        <thead class="thead-dark">
+			<tr>
+				<th>Artist</th>
+				<th>Number of Tickets</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+				<tr>
+					<td>{{this.artist}}</td>
+					<td>{{this.numberOfTickets}}</td>
+					<td>{{this.price}}</td>
+					<td>
+					<a href="/cart/delete/{{this.id}}">Delete</a>
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+	<div class="container mt-4 col-sm-11">
+		<a href="/checkout">Check Out</a>
+	</div>
+</main>

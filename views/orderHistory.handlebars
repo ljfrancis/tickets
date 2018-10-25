@@ -1,0 +1,25 @@
+<main>
+	<div class="container mt-4">
+	<h1>Past Orders: {{name}}</h1>
+	<table class="table">
+        <thead class="thead-dark">
+			<tr>
+				<th>Date Purchased</th>
+				<th>Artist</th>
+				<th>Number of Tickets</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+				<tr>
+					<td>{{this.date}}</td>
+					<td>{{this.artist}}</td>
+					<td>{{this.numberOfTickets}}</td>
+					<td>{{this.price}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+</main>

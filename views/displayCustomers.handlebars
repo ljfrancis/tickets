@@ -1,0 +1,25 @@
+<main>
+	<div class="container mt-4">
+	<h1>Customer List</h1>
+	<table class="table">
+        <thead class="thead-dark">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+				<tr>
+					<td>{{this.name}}</td>
+					<td>{{this.email}}</td>
+					<td>
+					<a href="/customer/{{this.id}}">View order history</a>
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	</div>
+</main>

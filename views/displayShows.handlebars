@@ -1,0 +1,33 @@
+<main>
+	<div class="container mt-4">
+	<h1>Upcoming Shows</h1>
+	<table class="table">
+        <thead class="thead-dark">
+			<tr>
+				<th>Artist</th>
+				<th>Date</th>
+				<th>Price</th>
+				<th>Seats Available</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each data}}
+				<tr>
+					<td>{{this.artist}}</td>
+					<td>{{this.date}}</td>
+					<td>{{this.price}}</td>
+					<td>{{this.seats}}</td>
+					<td>
+					{{#if this.admin}}
+					<a href="/shows/delete/{{this.id}}">Delete</a>
+					{{else}}
+					<a href="/shows/{{this.id}}">Buy Tickets</a>
+					{{/if}}
+				</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+</main>

@@ -1,0 +1,26 @@
+<div class="container bg-light text-dark rounded col-sm-6  p-3 mt-4">
+<form method="post" action="/addToCart">
+	<h2>{{show.artist}}</h2>
+
+	<div class="form-group">
+	<h3>{{show.date}}</h3>
+	<label>Price</label>
+	<p>${{show.price}}</p>
+	</div>
+
+	<div class="form-group">
+	<label>Quantity</label><br>
+	<select name="quantity" required>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select>
+	</div>
+
+	<input name="show_id" value="{{show.id}}" hidden></input>
+
+	<button type="submit" "btn btn-secondary">Add to Cart</button>
+</form>
+</div>
